@@ -1,0 +1,34 @@
+Configuration:
+  Properties:
+    Property:
+      - name: path
+        value: logs
+      - name: filename
+        value: devonmod-api
+
+  Appenders:
+    Console:
+      - name: Console
+        target: SYSTEM_OUT
+        PatternLayout:
+          pattern: "%d %p %C{1.} [%t] %m%n"
+
+    RollingFile:
+      - name: RollingFile
+        fileName: "${path}/${filename}.log"
+        filePattern: "${path}/$${date:yyyy-MM}/${filename}-%d{-dd-MM-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: "%d %p %C{1.} [%t] %m%n"
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+          SizeBasedTriggeringPolicy:
+            size: "10 MB"
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: Console
+        - ref: RollingFile

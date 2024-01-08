@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/devonmod_api?currentSchema=devonmod_api
+    username: postgres
+    password: root
+  flyway:
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: false
+
+jwt:
+  accessTokenValidity: 200000 #minutes
+  refreshTokenValidity: 262800 #minutes
+  publicKeyFilePath: "keys/public.der"
+  privateKeyFilePath: "keys/private.der"
+  reLoginPath: "/api/refresh-login"
