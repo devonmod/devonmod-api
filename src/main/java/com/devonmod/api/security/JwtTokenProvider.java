@@ -7,7 +7,7 @@ import static com.devonmod.api.exception.Error.JWT_AUTHENTICATION;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.devonmod.api.config.properties.JwtProperties;
+import com.devonmod.api.config.propeties.JwtProperties;
 import com.devonmod.api.enumeration.JwtTokenType;
 import com.devonmod.api.exception.AlgorithmNotAvailableException;
 import com.devonmod.api.exception.FileReadException;

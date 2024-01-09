@@ -3,7 +3,7 @@ package com.devonmod.api.security;
 import static com.devonmod.api.exception.Error.ACCESS_RESTRICTED;
 import static com.devonmod.api.exception.Error.JWT_AUTHENTICATION;
 
-import com.devonmod.api.config.properties.JwtProperties;
+import com.devonmod.api.config.propeties.JwtProperties;
 import com.devonmod.api.enumeration.JwtTokenType;
 import com.devonmod.api.exception.JwtAuthenticationException;
 import jakarta.servlet.FilterChain;

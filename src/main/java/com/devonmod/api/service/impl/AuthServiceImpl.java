@@ -3,7 +3,7 @@ package com.devonmod.api.service.impl;
 import static com.devonmod.api.exception.Error.INVALID_CREDENTIALS;
 import static com.devonmod.api.exception.Error.INVALID_REFRESH_TOKEN;
 
-import com.devonmod.api.config.properties.JwtProperties;
+import com.devonmod.api.config.propeties.JwtProperties;
 import com.devonmod.api.dto.request.AuthRequestDto;
 import com.devonmod.api.dto.response.AuthResponseDto;
 import com.devonmod.api.entity.UserEntity;
